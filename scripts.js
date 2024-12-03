@@ -14,13 +14,13 @@ camera.position.set(0,1.5, 1.5);
 // Lighting setup
 scene.add(new THREE.AmbientLight());
 
-const spotlight = new THREE.SpotLight(0xffffff, 1, 1, 10);
+const spotlight = new THREE.SpotLight(0xffffff, 0.1, 1, 10);
 spotlight.penumbra = 0.5;
 spotlight.position.set(0, 4, 2);
 spotlight.castShadow = true;
 scene.add(spotlight);
 
-const keyLight = new THREE.DirectionalLight(0xffffff, 1);
+const keyLight = new THREE.DirectionalLight(0xffffff,0.5);
 keyLight.position.set(1, 1, 2);
 keyLight.lookAt(new THREE.Vector3());
 scene.add(keyLight);
